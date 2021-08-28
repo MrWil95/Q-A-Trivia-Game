@@ -47,19 +47,15 @@ https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Tolkien-s-Trials-layout?node-i
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
-|August 30| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|August 28| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|August 30| Project Approval | Incomplete
+|August 30| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|August 31| Pseudocode / actual code | Incomplete
+|September 1| Initial Clickable Model  | Incomplete
+|September 2| MVP | Incomplete
+|| Presentations | Incomplete
 
 ## Priority Matrix
 
@@ -67,15 +63,17 @@ https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| HTML, CSS(layout) | H | 1hr |  |  |
+| Working with API | H | 3hrs|  |  |
+| Pseudocode / actual code | H | 6hrs|  |  |
+| Initial Clickable Model | H | 6hrs |  |  |
+| MVP | H | 8hrs |  |  |
+| Animation | M | 4hrs |  |  |
+| PostMVP | L-M | 4hrs |  |  |
+| Total | H | 32hrs |  |  |
+
 
 ## Code Snippet
 
