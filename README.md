@@ -2,15 +2,15 @@
 
 ## Project Name
 
-LOTR Trivia
+Q&A Trivia Game
 
 ## Project Description
 
-The end goal, here, is to build a site that will test the average "nerd's" knowledge on everything The Lord of the Rings. I will impliment buttons for the player to click in order to select the right answer to any given question. There will be a points system incorporated along with a timer function. I am going to add a menu with a start button to trigger the timer. The more questions that are answered correctly the higher your score will go. If the score is more than x when the timer is done, display "congratulations!" otherwise display "sorry, better luck next time." Before the trivia begins player must enter name. Puzzles and interactive activity will be added.
+The end goal, here, is to build a trivia game that will test the players' knowledge on different categories. I will impliment buttons for the player to click in order to select the right answer to any given question. There will be a points system incorporated along with a timer function. I am going to add a menu with a start button to trigger the timer and start the test, a difficulty setting will be added to spice things up a bit, and a category section to get some juicy topics. The more questions that are answered correctly the higher your score will go. If the score is more than x when the timer is done, display "congratulations!" otherwise display "sorry, better luck next time." Before the trivia begins player must enter name. At the end of the game you will get the option to start over or select category
 
 ## API and Data Sample
 
-https://the-one-api.dev/DPMsOmm0VFQ4tXGTszRB 
+https://opentdb.com/
 
 ## Wireframes
 
@@ -18,10 +18,8 @@ https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Tolkien-s-Trials-layout?node-i
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
 - On button.click {
 	-test start
@@ -29,17 +27,19 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 	-answer generated/assesed
 	-animation start
 }
-- timer count down
+- Difficulty setting
+- Category selection
+- Timer count down
 - Points system incrementation when answer = true 
 - when timer = 00:00 end game
-- if questions answered === x end game display congratulations, perfect score!
-- if questions correct > x when timer ends display congratulations!
+- retry or select category function
+- if questions answered correct === x end game display congratulations, perfect score!
+- if questions correct > x when timer ends display congratulations! else, sorry, try again!
 - responsive style
 - animations
  
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
 - Add second API
 - Add puzzles and interactive games
@@ -53,7 +53,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|August 30| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |July 13| Project Approval | Incomplete
 |July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |July 14| Pseudocode / actual code | Incomplete
@@ -63,7 +63,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 
 ## Timeframes
 
