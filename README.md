@@ -2,19 +2,19 @@
 
 ## Project Name
 
-The name of your project.
+LOTR Trivia
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+The end goal, here, is to build a site that will test the average "nerd's" knowledge on everything The Lord of the Rings. I will impliment buttons for the player to click in order to select the right answer to any given question. There will be a points system incorporated along with a timer function. I am going to add a menu with a start button to trigger the timer. The more questions that are answered correctly the higher your score will go. If the score is more than x when the timer is done, display "congratulations!" otherwise display "sorry, better luck next time." Before the trivia begins player must enter name. Puzzles and interactive activity will be added.
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+https://the-one-api.dev/DPMsOmm0VFQ4tXGTszRB 
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Tolkien-s-Trials-layout?node-id=4%3A143
 
 ### MVP/PostMVP
 
@@ -23,15 +23,27 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- On button.click {
+	-test start
+	-timer start
+	-answer generated/assesed
+	-animation start
+}
+- timer count down
+- Points system incrementation when answer = true 
+- when timer = 00:00 end game
+- if questions answered === x end game display congratulations, perfect score!
+- if questions correct > x when timer ends display congratulations!
+- responsive style
+- animations
+ 
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
 
 - Add second API
-- Use local storage to save user favorites
+- Add puzzles and interactive games
+- Add data storage
 
 ## Project Schedule
 
