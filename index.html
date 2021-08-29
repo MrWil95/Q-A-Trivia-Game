@@ -6,10 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <title>Document</title>
+    <title>Q&A Trivia Game</title>
 </head>
 <body>
-    <div id="timer">05:00</div>
-    <button>Start</button>
+    <header id="section1" class="sectiion1">
+        <div class="container">
+            <div class="flex">
+                <h1>Q&A Trivia Game</h1>
+                <button class="menu"><a href="#section2">Start</a></button>
+                <button class="menu">Difficulty</button>
+                <button class="menu">Category</button>
+            </div>
+        </div>
+    </header>
+    <main id="section2" class="section2">
+        <div class="message-container">
+            <h2 class="message">You win!</h2>
+            <h2 class="message">Sorry, try again.</h2>
+        </div>
+        <div class="questions-container">
+            <h2 class="questions">What is your favorite color?</h2>
+        </div>
+        <div class="container2">
+            <div class="flex2">
+                <div class="score-container">
+                    <div class="score"><span>0</span></div>
+                </div>
+                <div class="buttons">
+                    <button class="answer">A</button>
+                    <button class="answer">B</button>
+                    <button class="answer">C</button>
+                    <button class="answer">D</button>
+                </div>
+                <div class="primary-container">
+                    <div class="timer-container">
+                        <div class="timer"><span>00:00</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

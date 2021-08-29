@@ -14,7 +14,7 @@ https://opentdb.com/
 
 ## Wireframes
 
-https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Tolkien-s-Trials-layout?node-id=4%3A143
+https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Q-and-A-layout?node-id=4%3A125
 
 ### MVP/PostMVP
 
