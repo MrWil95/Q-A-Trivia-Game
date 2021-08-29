@@ -10,7 +10,7 @@ The end goal, here, is to build a trivia game that will test the players' knowle
 
 ## API and Data Sample
 
-https://opentdb.com/
+https://opentdb.com/api.php?amount=10
 
 ## Wireframes
 
