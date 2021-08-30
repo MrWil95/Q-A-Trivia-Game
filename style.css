@@ -17,7 +17,6 @@ body {
 header {
    width: 100vw;
    height: 100vh;
-   animation: slideout 2s ease-out 1s forwards;
 }
 
 /* Start menu */
@@ -65,7 +64,7 @@ main {
    position: relative;
    overflow-y: hidden;
    top: -42.45em;
-   animation: slidein 2s ease-out forwards;
+   transform: translateX(-2000px);
 }
 
 /* Timer */
@@ -207,4 +206,12 @@ main {
    100% {
       transform: translateX(0);
    }
+}
+
+.slide-out {
+   animation: slideout 2s ease-in .5s forwards;
+}
+
+.slide-in {
+   animation: slidein 2s ease-out forwards;
 }
