@@ -184,6 +184,7 @@ https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Q-and-A-layout?node-id=4%3A125
 || Presentations | Incomplete
 
 ## Priority Matrix
+![priority_matrix](Priority_matrix.png)
 
 https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 
