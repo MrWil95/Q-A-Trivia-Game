@@ -138,6 +138,8 @@ https://opentdb.com/api.php?amount=10
 
 ## Wireframes
 
+![wireframes](wireframe.png)
+
 https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Q-and-A-layout?node-id=4%3A125
 
 ### MVP/PostMVP
