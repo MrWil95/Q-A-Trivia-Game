@@ -46,16 +46,42 @@ h1 {
    color: black;
 }
 
-/* Game Page*/
+/* Game */
+/* Timer */
+.timer-container {
+   display: flex;
+   justify-content: flex-end;
+   position: absolute;
+   right: 2em;
+   width: 100%;
+   height: 100%;
+   margin-top:  3em
+}
+
+.timer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(0, 0, 0, .5);
+   width: 5.4em;
+   height: 3em;
+   border-radius: 10px;
+}
+
+.timer span {
+   font-size: 1.75em;
+   font-weight: 800;
+   color: white;
+}
 
 /* Questions */
-.questions-container{
+.questions-container {
    display: flex;
    justify-content: center;
    align-items: center;
    position: absolute;
-   width: 100vw;
-   height: 100vh;
+   width: 100%;
+   height: 100%;
 }
 
 .questions {
@@ -90,6 +116,7 @@ h1 {
    background-color: rgba(0, 0, 0, .5);
 }
 
+/* Containers */
 .container2 {
    display: flex;
    width: 97vw;
@@ -131,7 +158,7 @@ h1 {
    width: 100%;
    margin-top: 30em;
    margin-right: auto;
-   margin-left: 12.5%;
+   margin-left: 9%;
 }
 
 .answer{
@@ -147,32 +174,4 @@ h1 {
 .answer:hover {
    background-color: rgba(4, 93, 210, 0.8);
    cursor: pointer;
-}
-
-/* Timer */
-.primary-container {
-   display: flex;
-   margin-top: 3em;
-   margin-right: 1em;
-   width: 30%;
-}
-
-.timer-container {
-   display: flex;
-}
-
-.timer {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: rgba(0, 0, 0, .5);
-   width: 5.4em;
-   height: 3em;
-   border-radius: 10px;
-}
-
-.timer span {
-   font-size: 1.75em;
-   font-weight: 800;
-   color: white;
 }

@@ -12,6 +12,130 @@ The end goal, here, is to build a trivia game that will test the players' knowle
 
 https://opentdb.com/api.php?amount=10
 
+```{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Entertainment: Video Games",
+            "type": "boolean",
+            "difficulty": "easy",
+            "question": "Peter Molyneux was the founder of Bullfrog Productions.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What was the pen name of novelist, Mary Ann Evans?",
+            "correct_answer": "George Eliot",
+            "incorrect_answers": [
+                "George Orwell",
+                "George Bernard Shaw",
+                "George Saunders"
+            ]
+        },
+        {
+            "category": "Entertainment: Film",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "This movie contains the quote, &quot;I love the smell of napalm in the morning!&quot;",
+            "correct_answer": "Apocalypse Now",
+            "incorrect_answers": [
+                "Platoon",
+                "The Deer Hunter",
+                "Full Metal Jacket"
+            ]
+        },
+        {
+            "category": "Entertainment: Film",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "This movie contains the quote, &quot;Nobody puts Baby in a corner.&quot;",
+            "correct_answer": "Dirty Dancing",
+            "incorrect_answers": [
+                "Three Men and a Baby",
+                "Ferris Bueller&#039;s Day Off",
+                "Pretty in Pink"
+            ]
+        },
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Which of the following Ivy League universities has its official motto in Hebrew as well as in Latin?",
+            "correct_answer": "Yale University",
+            "incorrect_answers": [
+                "Princeton University",
+                "Harvard University",
+                "Columbia University"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "The default playermodel of Garry&#039;s Mod is this Half Life 2 character.",
+            "correct_answer": "Isaac Kleiner",
+            "incorrect_answers": [
+                "G-Man",
+                "Alyx Vance",
+                "Gordon Freeman"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What is the name of Sherlock Holmes&#039;s brother?",
+            "correct_answer": "Mycroft Holmes",
+            "incorrect_answers": [
+                "Mederi Holmes",
+                "Martin Holmes",
+                "Herbie Hancock Holmes"
+            ]
+        },
+        {
+            "category": "Entertainment: Japanese Anime & Manga",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "In &quot;Hunter x Hunter&quot;, which of the following is NOT a type of Nen aura?",
+            "correct_answer": "Restoration",
+            "incorrect_answers": [
+                "Emission",
+                "Transmutation",
+                "Specialization"
+            ]
+        },
+        {
+            "category": "Geography",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "In which country is Tallinn located?",
+            "correct_answer": "Estonia",
+            "incorrect_answers": [
+                "Finland",
+                "Sweden",
+                "Poland"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "Which of these characters from Final Fantasy VIII primarily spoke in one word sentences?",
+            "correct_answer": "Fujin",
+            "incorrect_answers": [
+                "Raijin",
+                "Seifer",
+                "Zell"
+            ]
+        }
+    ]
+}```
+
 ## Wireframes
 
 https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Q-and-A-layout?node-id=4%3A125
