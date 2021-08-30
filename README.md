@@ -134,7 +134,8 @@ https://opentdb.com/api.php?amount=10
             ]
         }
     ]
-}```
+}
+```
 
 ## Wireframes
 
@@ -153,23 +154,23 @@ https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Q-and-A-layout?node-id=4%3A125
 	-answer generated/assesed
 	-animation start
 }
-- Difficulty setting
-- Category selection
 - Timer count down
-- Points system incrementation when answer = true 
 - when timer = 00:00 end game
-- retry or select category function
-- if questions answered correct === x end game display congratulations, perfect score!
-- if questions correct > x when timer ends display congratulations! else, sorry, try again!
 - responsive style
 - animations
+- Points system incrementation when answer = true 
+- if questions answered correct === x end game display congratulations, perfect score!
+- if questions correct > x when timer ends display congratulations! else, sorry, try again!
  
 
 #### PostMVP  
 
+- retry or select category function
 - Add second API
 - Add puzzles and interactive games
 - Add data storage
+- Difficulty setting
+- Category selection
 
 ## Project Schedule
 
@@ -193,7 +194,7 @@ https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | HTML, CSS(layout) | H | 2hrs |  |  |
-| Working with API | H | 3hrs|  |  |
+| Working with API | H | 3hrs |  |  |
 | Start game function | H | 2hrs |  |  |
 | Timer start | H | 2hrs |  |  |
 | Timer end | H | 2hrs |  |  |
@@ -202,6 +203,7 @@ https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 | End game function | H | 3hrs |  |  |
 | Animation | M | 3hrs |  |  |
 | PostMVP | L-M | 4hrs |  |  |
+| Debugging | L-M | 4hrs |  |  |
 | Total | H | 32hrs |  |  |
 
 
