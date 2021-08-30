@@ -13,34 +13,32 @@
         <div class="container">
             <div class="flex">
                 <h1>Q&A Trivia Game</h1>
-                <button class="menu"><a href="#section2">Start</a></button>
-                <button class="menu">Difficulty</button>
-                <button class="menu">Category</button>
+                <button id="start" class="menu"><a href="#section2">Start</a></button>
+                <button id="difficulty" class="menu">Difficulty</button>
+                <button id="category" class="menu">Category</button>
             </div>
         </div>
     </header>
     <main id="section2" class="section2">
         <div class="timer-container">
-            <div class="timer"><span>00:00</span></div>
+            <div class="timer" data-id="1"><span>00:00</span></div>
         </div>
         <div class="message-container">
-            <h2 class="message">You win!</h2>
-            <h2 class="message">Sorry, try again.</h2>
+            <h2 class="message" data-id="2">You win!</h2>
+            <h2 class="message" data-id="3">Sorry, try again.</h2>
         </div>
         <div class="questions-container">
-            <h2 class="questions">What is your favorite color?</h2>
+            <h2 class="questions" data-id="4">What is your favorite color?</h2>
         </div>
-        <div class="container2">
-            <div class="flex2">
-                <div class="score-container">
-                    <div class="score"><span>0</span></div>
-                </div>
-                <div class="buttons">
-                    <button class="answer">A</button>
-                    <button class="answer">B</button>
-                    <button class="answer">C</button>
-                    <button class="answer">D</button>
-                </div>
+        <div class="score-container">
+            <div class="score" data-id="5"><span>0</span></div>
+        </div>
+        <div class="buttons-container">
+            <div class="buttons">
+                <button id="a" class="answers" data-id="6">A</button>
+                <button id="b" class="answers" data-id="7">B</button>
+                <button id="c" class="answers" data-id="8">C</button>
+                <button id="d" class="answers" data-id="9">D</button>
             </div>
         </div>
     </main>
