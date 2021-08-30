@@ -192,12 +192,15 @@ https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML, CSS(layout) | H | 1hr |  |  |
+| HTML, CSS(layout) | H | 2hrs |  |  |
 | Working with API | H | 3hrs|  |  |
-| Pseudocode / actual code | H | 6hrs|  |  |
-| Initial Clickable Model | H | 6hrs |  |  |
-| MVP | H | 8hrs |  |  |
-| Animation | M | 4hrs |  |  |
+| Start game function | H | 2hrs |  |  |
+| Timer start | H | 2hrs |  |  |
+| Timer end | H | 2hrs |  |  |
+| Scoring | H | 2hrs |  |  |
+| Scoring end game | H | 2hrs |  |  |
+| End game function | H | 3hrs |  |  |
+| Animation | M | 3hrs |  |  |
 | PostMVP | L-M | 4hrs |  |  |
 | Total | H | 32hrs |  |  |
 
