@@ -77,7 +77,7 @@ function getAnswer(correct_answer, incorrect_answers) {
 }
 
 function shuffle(array) {
-   var currentIndex = array.length,  randomIndex;
+   let currentIndex = array.length,  randomIndex;
  
    // While there remain elements to shuffle...
    while (currentIndex != 0) {
