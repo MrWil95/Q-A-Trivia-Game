@@ -18,12 +18,19 @@ async function fetchData(results) {
       let res = await axios.get(url);
       let choices = res.data;
       console.log(choices);
-   
+      choices.results.forEach((result) => {
+         console.log(result);
+         questionSelect(result.question);
+      })   
    } catch(error) {
       console.log(error);
    }
 }
-fetchData();
+// fetchData();
+
+function questionSelect(question); {
+   
+}
 
 // fetch("https://opentdb.com/api.php?amount=10")
 //    .then(res => {
