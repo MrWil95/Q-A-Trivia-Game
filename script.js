@@ -37,8 +37,9 @@ async function fetchData(results) {
 fetchData()
 
 function questionSelect(question) {
-   shuffleQuestions = [].slice.call(question).sort(() => Math.random() - .5)
+   shuffleQuestions = [].slice(question).sort(() => Math.random() - .5)
    currentQuestion = 0
+   nextQuestion()
 }
 
 function nextQuestion() {
@@ -46,7 +47,7 @@ function nextQuestion() {
 }
 
 function questions(question) {
-   questionsDisplay.innerText = question.question
+   questionsDisplay.innerText = question
 }
 
 function getAnswer(correct_answer, incorrect_answers) {
