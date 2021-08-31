@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="script.js"></script>
     <title>Q&A Trivia Game</title>
 </head>
@@ -24,11 +25,11 @@
             <div class="timer" data-id="1"><span>00:00</span></div>
         </div>
         <div class="message-container">
-            <h2 class="message" data-id="2">You win!</h2>
-            <h2 class="message" data-id="3">Sorry, try again.</h2>
+            <h2 id="win" class="message" data-id="2"></h2>
+            <h2 id="lose" class="message" data-id="3"></h2>
         </div>
         <div class="questions-container">
-            <h2 class="questions" data-id="4">What is your favorite color?</h2>
+            <h2 id="questions" class="questions" data-id="4">What is your favorite color?</h2>
         </div>
         <div class="score-container">
             <div class="score" data-id="5"><span>0</span></div>
