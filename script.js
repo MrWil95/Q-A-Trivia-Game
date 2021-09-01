@@ -6,12 +6,12 @@ const category = document.querySelector("#category")
 const messageWin = document.querySelector("#win")
 const messageLose = document.querySelector("#lose")
 const questionsDisplay = document.querySelector("#questions")
-const score = document.querySelector(".score")
-const timer = document.querySelector(".timer")
+const scoreCount = document.querySelector("#score")
+const timer = document.querySelector("#timer")
+let score = 0
 let shuffleQuestions
 let currentQuestion = 0
-let questions 
-
+let questions
 
 const start = () => {
    document.querySelector("#section1").className = "slide-out"
@@ -20,20 +20,15 @@ const start = () => {
 startBtn.addEventListener("click", start)
 
 // grab data from api:done
-// select random question from data & display result
-// select answers(correct/incorrect) from question
-// loop answers and append randomly to each button
+// select random question from data & display result:done
+// select answers(correct/incorrect) from question:done
 async function fetchData(results) {
    try {
       let res = await axios.get(url)
       let choices = res.data
       console.log(choices)
       playGame(choices.results)
-      questions = choices.results
-      // choices.results.forEach((result) => {
-      //    // console.log(result)
-      //    getAnswer(result.correct_answer, result.incorrect_answers)
-      // })   
+      questions = choices.results   
    } catch(error) {
       console.log(error)
    }
@@ -46,9 +41,23 @@ function playGame(questions) {
    getAnswer(questions[currentQuestion].correct_answer, questions[currentQuestion].incorrect_answers)
 }
 
-function nextQuestion(e) {
-   console.log(questions, this, e)
-   // questions(shuffleQuestions[currentQuestion])
+function nextQuestion() {
+   console.log(questions)
+   questionsDisplay.innerText = ""
+   displayQuestion(questions[Math.floor(Math.random() * questions.length)].question)
+   resetAnswer()
+   
+}
+
+function resetAnswer() {
+   while(answerBtn.firstChild) {
+      answerBtn.removeChild
+      (answerBtn.firstChild)
+   }
+}
+
+function nextAnswer() {
+
 }
 
 function displayQuestion(question) {
@@ -64,13 +73,22 @@ function getAnswer(correct_answer, incorrect_answers) {
          button.classList.add("answers")
          button.setAttribute("data-correct", true)
          button.innerText = answer
-         button.addEventListener("click", (e) =>  {alert(e)})
+         button.addEventListener("click", () =>  {
+            nextQuestion()
+            scoreCounter()
+            button.classList.add("correct")
+            // button.innerText = ""
+            // getAnswer(answer[Math.floor(Math.random() * answer.length)].answer)
+         })
          answerBtn.append(button)
       } else {
          let button = document.createElement("button")
          button.classList.add("answers")
          button.innerText = answer
-         button.addEventListener("click", nextQuestion)
+         button.addEventListener("click", () => {
+            nextQuestion()
+            button.classList.add("wrong")
+         })
          answerBtn.append(button)
       }
    })
@@ -94,11 +112,22 @@ function shuffle(array) {
    return array;
  }
 
-// fetch("https://opentdb.com/api.php?amount=10")
-//    .then(res => {
-//       return res.json();
-//    })
-//    .then(loadQuestions => {
-//       console.log(loadQuestions.results);
-//       // loadQuestions.results
-//    
+function scoreCounter() {
+   score++
+   scoreCount.innerText = score
+ }
+
+// let interval = setInterval(function(){
+//    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+//    let seconds = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+//    let time = 60000
+
+//    document.querySelector("#timer").innerHTML= time
+//       time--
+//       if (count === 0){
+//         clearInterval(interval)
+//         document.querySelector("#timer").innerHTML='Done'
+//         // or...
+//         alert("You're out of time!")
+//       }
+// }, 1000)
