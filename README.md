@@ -177,8 +177,8 @@ https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Q-and-A-layout?node-id=4%3A125
 |  Day | Deliverable | Status
 |---|---| ---|
 |August 28| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|August 30| Project Approval | Incomplete
-|August 30| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|August 30| Project Approval | Complete
+|August 30| Core Application Structure (HTML, CSS, etc.) | Complete
 |August 31| Pseudocode / actual code | Incomplete
 |September 1| Initial Clickable Model  | Incomplete
 |September 2| MVP | Incomplete
@@ -193,12 +193,16 @@ https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML, CSS(layout) | H | 2hrs |  |  |
-| Working with API | H | 3hrs |  |  |
-| Start game function | H | 2hrs |  |  |
+| HTML, CSS(layout) | H | 2hrs | 1hr |  |
+| Working with API | H | 3hrs | 3hrs |  |
+| Start game function | H | 2hrs | 1.25hrs|  |
+| Populate questions | H | 2hrs | 1hr|  |
+| Next question | H | 2hrs | 3hrs|  |
+| Populate answers| H | 2hrs | 4.5hrs|  |
+| Next answers | H | 2hrs |  |  |
 | Timer start | H | 2hrs |  |  |
 | Timer end | H | 2hrs |  |  |
-| Scoring | H | 2hrs |  |  |
+| Scoring | H | 2hrs | 30min |  |
 | Scoring end game | H | 2hrs |  |  |
 | End game function | H | 3hrs |  |  |
 | Animation | M | 3hrs |  |  |
