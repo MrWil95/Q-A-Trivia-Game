@@ -3,37 +3,38 @@ const startBtn = document.querySelector("#start")
 let answerBtn = document.querySelector(".buttons")
 const difficulty = document.querySelector("#difficulty")
 const category = document.querySelector("#category")
-const messageWin = document.querySelector("#win")
-const messageLose = document.querySelector("#lose")
+const message = document.querySelector(".message-container")
 const questionsDisplay = document.querySelector("#questions")
 const scoreCount = document.querySelector("#score")
 const timer = document.querySelector("#timer")
-let time = 15
-let timeInterval = setInterval(startTime, 1000)
-let resetTime = () => {
-   if(time < 0) {
-   nextQuestion()
-   time = 15
-   }
-}
-let delay
 let score = 0
 let shuffleQuestions
 let currentQuestion = 0
 let questions
 let answer
 
-const start = () => {
+document.querySelector("#start").addEventListener("click", function(){
    document.querySelector("#section1").className = "fade-out"
    document.querySelector("#section2").className = "slide-in"
-}
-startBtn.addEventListener("click", start, playGame)
 
-function startTime() {
-   timer.innerText = time
-   time--
-   resetTime()
-}
+   let time = 15
+
+   setTimeout(() => {
+      let startTimer = setInterval(function function1(){
+      timer.innerText = time
+         time -=1
+         if(time < 0){
+            nextQuestion()
+            time = 15  
+         }
+      }, 1000)
+   }, 2000)
+
+
+     
+
+   console.log(timer);
+});
 
 // grab data from api:done
 // select random question from data & display result:done
@@ -55,9 +56,6 @@ function playGame(questions) {
    displayQuestion(questions[currentQuestion].question)
    console.log(questions[currentQuestion])
    getAnswer(questions[currentQuestion].correct_answer, questions[currentQuestion].incorrect_answers)
-   setTimeout(() => {
-      startTime()
-   }, 5000)
 }
 
 function nextQuestion() {
@@ -98,7 +96,7 @@ function getAnswer(correct_answer, incorrect_answers) {
             setTimeout(() => {
                nextQuestion()
                scoreCounter()
-               startTime()
+               // startTime()
             }, 1000)
          })
          answerBtn.append(button)
@@ -110,7 +108,7 @@ function getAnswer(correct_answer, incorrect_answers) {
             button.classList.add("wrong")
             setTimeout(() => {
                nextQuestion()
-               resetTime()
+               // resetTime()
             }, 1000)
          })
          answerBtn.append(button)
@@ -139,4 +137,10 @@ function shuffle(array) {
 function scoreCounter() {
    score++
    scoreCount.innerText = score
+   if(score > 10) {
+     let win = document.createElement("h2")
+      win.classList.add("message")
+      win.textContent = "Perfect score!"
+      message.append(win)
+   }
  }
