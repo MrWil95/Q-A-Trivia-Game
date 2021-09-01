@@ -197,15 +197,15 @@ https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 | Working with API | H | 3hrs | 3hrs |  |
 | Start game function | H | 2hrs | 1.25hrs|  |
 | Populate questions | H | 2hrs | 1hr|  |
-| Next question | H | 2hrs | 3hrs|  |
+| Get next question | H | 2hrs | 3hrs|  |
 | Populate answers| H | 2hrs | 4.5hrs|  |
-| Next answers | H | 2hrs |  |  |
-| Timer start | H | 2hrs |  |  |
-| Timer end | H | 2hrs |  |  |
+| Get next answers | H | 2hrs | 5hrs |  |
+| Timer start | H | 2hrs | 30min |  |
+| Timer restart | H | 2hrs | 5 min |  |
 | Scoring | H | 2hrs | 30min |  |
 | Scoring end game | H | 2hrs |  |  |
 | End game function | H | 3hrs |  |  |
-| Animation | M | 3hrs |  |  |
+| Animation | M | 3hrs | 1hr |  |
 | PostMVP | L-M | 4hrs |  |  |
 | Debugging | L-M | 4hrs |  |  |
 | Total | H | 32hrs |  |  |

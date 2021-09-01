@@ -8,16 +8,32 @@ const messageLose = document.querySelector("#lose")
 const questionsDisplay = document.querySelector("#questions")
 const scoreCount = document.querySelector("#score")
 const timer = document.querySelector("#timer")
+let time = 15
+let timeInterval = setInterval(startTime, 1000)
+let resetTime = () => {
+   if(time < 0) {
+   nextQuestion()
+   time = 15
+   }
+}
+let delay
 let score = 0
 let shuffleQuestions
 let currentQuestion = 0
 let questions
+let answer
 
 const start = () => {
-   document.querySelector("#section1").className = "slide-out"
+   document.querySelector("#section1").className = "fade-out"
    document.querySelector("#section2").className = "slide-in"
 }
-startBtn.addEventListener("click", start)
+startBtn.addEventListener("click", start, playGame)
+
+function startTime() {
+   timer.innerText = time
+   time--
+   resetTime()
+}
 
 // grab data from api:done
 // select random question from data & display result:done
@@ -39,29 +55,33 @@ function playGame(questions) {
    displayQuestion(questions[currentQuestion].question)
    console.log(questions[currentQuestion])
    getAnswer(questions[currentQuestion].correct_answer, questions[currentQuestion].incorrect_answers)
+   setTimeout(() => {
+      startTime()
+   }, 5000)
 }
 
 function nextQuestion() {
+   currentQuestion +=1
    console.log(questions)
    questionsDisplay.innerText = ""
-   displayQuestion(questions[Math.floor(Math.random() * questions.length)].question)
    resetAnswer()
-   
+   playGame(questions)
 }
 
 function resetAnswer() {
+   console.log(answerBtn)
    while(answerBtn.firstChild) {
       answerBtn.removeChild
       (answerBtn.firstChild)
    }
 }
 
-function nextAnswer() {
-
-}
-
 function displayQuestion(question) {
    questionsDisplay.innerText = question
+}
+
+function displayAnswer(answer) {
+   answerBtn.innerText = answer
 }
 
 function getAnswer(correct_answer, incorrect_answers) {
@@ -74,11 +94,12 @@ function getAnswer(correct_answer, incorrect_answers) {
          button.setAttribute("data-correct", true)
          button.innerText = answer
          button.addEventListener("click", () =>  {
-            nextQuestion()
-            scoreCounter()
             button.classList.add("correct")
-            // button.innerText = ""
-            // getAnswer(answer[Math.floor(Math.random() * answer.length)].answer)
+            setTimeout(() => {
+               nextQuestion()
+               scoreCounter()
+               startTime()
+            }, 1000)
          })
          answerBtn.append(button)
       } else {
@@ -86,8 +107,11 @@ function getAnswer(correct_answer, incorrect_answers) {
          button.classList.add("answers")
          button.innerText = answer
          button.addEventListener("click", () => {
-            nextQuestion()
             button.classList.add("wrong")
+            setTimeout(() => {
+               nextQuestion()
+               resetTime()
+            }, 1000)
          })
          answerBtn.append(button)
       }
@@ -116,18 +140,3 @@ function scoreCounter() {
    score++
    scoreCount.innerText = score
  }
-
-// let interval = setInterval(function(){
-//    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-//    let seconds = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-//    let time = 60000
-
-//    document.querySelector("#timer").innerHTML= time
-//       time--
-//       if (count === 0){
-//         clearInterval(interval)
-//         document.querySelector("#timer").innerHTML='Done'
-//         // or...
-//         alert("You're out of time!")
-//       }
-// }, 1000)
