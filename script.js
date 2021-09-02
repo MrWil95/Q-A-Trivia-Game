@@ -28,34 +28,20 @@ document.querySelector("#start").addEventListener("click", function(){
          }
       }, 1000)
    }, 2000)
-   // answerBtn.addEventListener("click", () => {
-   //    clearTimeout(startTimer)
-   //    timer.innerText = 15
-   //    setTimeout(() => {
-   //       startTimer = setInterval(function startTime(){
-   //          time -=1
-   //          if(time < 0){
-   //             nextQuestion()
-   //             time = 15  
-   //          }
-   //       }, 1000)
-   //    }, 2000)
-   // })
-})
-
-
-answerBtn.addEventListener("click", () => {
-   clearTimeout(startTimer)
-   timer.innerText = 15
-   setTimeout(() => {
-      startTimer = setInterval(function (){
-         time -=1
-         if(time < 0){
-            nextQuestion()
-            time = 15  
-         }
+   answerBtn.addEventListener("click", () => {
+      clearTimeout(startTimer)
+      let time = 15
+      timer.innerText = time
+      setTimeout(() => {
+         restartTime = setInterval(function (){
+            time -=1
+            if(time < 0){
+               nextQuestion()
+               time = 15  
+            }
+         }, 1000)
       }, 1000)
-   }, 2000)
+   })
 })
 
 // function stopTimer() {
@@ -136,8 +122,19 @@ function getAnswer(correct_answer, incorrect_answers) {
          button.addEventListener("click", () =>  {
             button.classList.add("correct")
             setTimeout(() => {
+               clearTimeout(startTimer)
                nextQuestion()
                scoreCounter()
+               // setTimeout(() => {
+               //    restartTime = setInterval(function (){
+               //       timer.innerText = 15
+               //       time -=1
+               //       if(time < 0){
+               //          nextQuestion()
+               //          time = 15  
+               //       }
+               //    }, 1000)
+               // }, 2000)
             }, 1000)
          })
          answerBtn.append(button)
