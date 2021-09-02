@@ -220,9 +220,9 @@ main {
 }
 
 .fade-out {
-   animation: fadeout 2s ease-out forwards;
+   animation: fadeout 2s ease-out .25s forwards;
 }
 
 .slide-in {
-   animation: slidein 2s ease-out forwards;
+   animation: slidein 2s ease-out .5s forwards;
 }
