@@ -33,9 +33,9 @@ function startCountdown() {
    }, 1000)    
 }
 
- function stopTimer() {
+ function stopCountdown() {
+   time = 15
    clearTimeout(startTimer)
-   timer.innerText = 15
 }
 
 async function fetchData(results) {
@@ -63,7 +63,7 @@ function nextQuestion() {
    questionsDisplay.innerText = ""
    resetAnswer()
    playGame(questions)
-   if([currentQuestion] > 10) {
+   if(currentQuestion === 10) {
       endGame()
    }
 }
@@ -155,9 +155,15 @@ function scoreCounter() {
 }
 
 function endGame() {
-   stopTimer()
-      let gameOver = document.createElement("h2")
-      gameOver.classList.add("message")
-      gameOver.textContent = "Game over!"
-      message.append(win)
+   stopCountdown()
+   let gameOver = document.createElement("h2")
+   let tryAgain = document.createElement("h2")
+   gameOver.classList.add("message")
+   tryAgain.classList.add("end-game")
+   gameOver.innerText = "Game over!"
+   tryAgain.innerText = "Try again?"
+   message.append(gameOver)
+   questionsDisplay.append(tryAgain)
+   // message.style.display = "flex"
+
 }
