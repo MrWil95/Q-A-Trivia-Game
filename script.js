@@ -34,7 +34,7 @@ function startCountdown() {
 }
 
  function stopCountdown() {
-   time = 15
+   time = 0
    clearTimeout(startTimer)
 }
 
@@ -62,9 +62,11 @@ function nextQuestion() {
    console.log(questions)
    questionsDisplay.innerText = ""
    resetAnswer()
-   playGame(questions)
    if(currentQuestion === 10) {
       endGame()
+   } else {
+   playGame(questions)
+   startCountdown()
    }
 }
 
@@ -79,7 +81,7 @@ function resetAnswer() {
 function displayQuestion(question) {
    let questionText = document.createElement("h2")
    questionText.classList.add("questions")
-   questionText.innerText = question
+   questionText.innerHTML = question
    questionsDisplay.append(questionText)
 }
 
@@ -95,7 +97,7 @@ function getAnswer(correct_answer, incorrect_answers) {
          let button = document.createElement("button")
          button.classList.add("answers")
          button.setAttribute("data-correct", true)
-         button.innerText = answer
+         button.innerHTML = answer
          button.addEventListener("click", () =>  {
             button.classList.add("correct")
             time = 15
@@ -103,21 +105,19 @@ function getAnswer(correct_answer, incorrect_answers) {
             setTimeout(() => {
                nextQuestion()
                scoreCounter()
-               startCountdown();
             }, 1000)
          })
          answerBtn.append(button)
       } else {
          let button = document.createElement("button")
          button.classList.add("answers")
-         button.innerText = answer
+         button.innerHTML = answer
          button.addEventListener("click", () => {
             button.classList.add("wrong")
             time = 15
             clearTimeout(startTimer)
             setTimeout(() => {
                nextQuestion()
-               startCountdown();
             }, 1000)
          })
          answerBtn.append(button)
@@ -143,27 +143,44 @@ function shuffle(array) {
 }
 
 function scoreCounter() {
-   score++
-   scoreCount.innerText = score
    if(score >= 10) {
-      resetTimer()
+      stopCountdown()
       let win = document.createElement("h2")
       win.classList.add("message")
       win.textContent = "Perfect score!"
       message.append(win)
+   } else {
+      score++
+      scoreCount.innerText = score
    }
 }
 
 function endGame() {
+   timer.innerText = 0
+   console.log(message)
    stopCountdown()
    let gameOver = document.createElement("h2")
-   let tryAgain = document.createElement("h2")
    gameOver.classList.add("message")
-   tryAgain.classList.add("end-game")
    gameOver.innerText = "Game over!"
-   tryAgain.innerText = "Try again?"
    message.append(gameOver)
-   questionsDisplay.append(tryAgain)
+   setTimeout(() => {
+      document.querySelector("#section2").className = "fade-out"
+   }, 1000)
+   setTimeout(() => {
+      document.querySelector("#section1").className = "fade-in"
+   }, 2000)
+   setTimeout(() => {
+      restartGame()
+   }, 4000)
+   // let tryAgain = document.createElement("h2")
+   // let retry = document.createElement("button")
+   // let  
+   // tryAgain.classList.add("end-game")
+   // tryAgain.innerText = "Try again?"
+   // questionsDisplay.append(tryAgain)
    // message.style.display = "flex"
+}
 
+function restartGame() {
+   window.location.reload(true)
 }

@@ -191,35 +191,67 @@ https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 
 ## Timeframes
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| HTML, CSS(layout) | H | 2hrs | 1hr |  |
-| Working with API | H | 3hrs | 3hrs |  |
-| Start game function | H | 2hrs | 1.25hrs|  |
-| Populate questions | H | 2hrs | 1hr|  |
-| Get next question | H | 2hrs | 3hrs|  |
-| Populate answers| H | 2hrs | 4.5hrs|  |
-| Get next answers | H | 2hrs | 5hrs |  |
-| Timer start | H | 2hrs | 30min |  |
-| Timer restart | H | 2hrs | 5 min |  |
-| Scoring | H | 2hrs | 30min |  |
-| Scoring end game | H | 2hrs |  |  |
-| End game function | H | 3hrs |  |  |
-| Animation | M | 3hrs | 1hr |  |
-| PostMVP | L-M | 4hrs |  |  |
-| Debugging | L-M | 4hrs |  |  |
-| Total | H | 32hrs |  |  |
+| Component         | Priority | Estimated Time | Time Invested | Actual Time |
+| ---               | :---:    | :---:          |  :---:        |:---:        |
+|HTML, CSS(layout)  | H        | 2hrs           | 1hr           |             |   
+|Working with API   | H        | 3hrs           | 3hrs          |             |
+|Start game function| H        | 2hrs           | 1.5hrs        |             |
+|Populate questions | H        | 2hrs           | 1hr           |             |
+|Get next question  | H        | 2hrs           | 3h            |             |
+|Populate answers   | H        | 2hrs           | 4.5hrs        |             |
+|Get next answers   | H        | 2hrs           | 5hrs          |             |
+|Timer start        | H        | 2hrs           | 1hr           |             |
+|Timer restart      | H        | 2hrs           | 2.5hrs        |             |
+|Scoring            | H        | 2hrs           | 1hr           |             |
+|End game function  | H        | 3hrs           | 2 hrs         |             |
+|Animation          | M        | 3hrs           | 1hr           |             |
+|PostMVP            | M        | 4hrs           | N/A           |             |
+|Debugging          | H        | 4hrs           | 7hrs          |             |
+|Total              | H        | 32hrs          |               |             |
 
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+This piece of code takes the answers(correct and incorrect) to each question, shuffles them into each button, and decides if the player chose the right one whne the button is clicked. It then moves on to the next question and increments the score for every correct answer.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+function getAnswer(correct_answer, incorrect_answers) {
+   let correct = correct_answer
+   let answers = shuffle([...incorrect_answers, correct_answer])
+   answers.forEach(answer => {
+      if (answer === correct) {
+         let button = document.createElement("button")
+         button.classList.add("answers")
+         button.setAttribute("data-correct", true)
+         button.innerHTML = answer
+         button.addEventListener("click", () =>  {
+            button.classList.add("correct")
+            time = 15
+            clearTimeout(startTimer)
+            setTimeout(() => {
+               nextQuestion()
+               scoreCounter()
+            }, 1000)
+         })
+         answerBtn.append(button)
+      } else {
+         let button = document.createElement("button")
+         button.classList.add("answers")
+         button.innerHTML = answer
+         button.addEventListener("click", () => {
+            button.classList.add("wrong")
+            time = 15
+            clearTimeout(startTimer)
+            setTimeout(() => {
+               nextQuestion()
+            }, 1000)
+         })
+         answerBtn.append(button)
+      }
+   })
 }
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ Instead of implementing a continuous timer that ends the game when reaching 0 I made a timer that loops back and moves on to the next question when reaching 0  to add some amount of difficulty to the game. Do to time and the difficulties I faced I wasn't able to add a selection process to play again with new generated questions or to go back to the main menu, instead I simply made the game restart.
+ I also wasn't able to any post MVP in but will go back to those projects at a later time.
