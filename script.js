@@ -66,7 +66,6 @@ function nextQuestion() {
       endGame()
    } else {
    playGame(questions)
-   startCountdown()
    }
 }
 
@@ -104,6 +103,7 @@ function getAnswer(correct_answer, incorrect_answers) {
             clearTimeout(startTimer)
             setTimeout(() => {
                nextQuestion()
+               startCountdown()
                scoreCounter()
             }, 1000)
          })
@@ -118,6 +118,7 @@ function getAnswer(correct_answer, incorrect_answers) {
             clearTimeout(startTimer)
             setTimeout(() => {
                nextQuestion()
+               startCountdown()
             }, 1000)
          })
          answerBtn.append(button)
