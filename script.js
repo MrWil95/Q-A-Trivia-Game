@@ -17,49 +17,26 @@ let answer
 document.querySelector("#start").addEventListener("click", function(){
    document.querySelector("#section1").className = "fade-out"
    document.querySelector("#section2").className = "slide-in"
-
    setTimeout(() => {
-      startTimer = setInterval(function startTime(){
-         timer.innerText = time
-         time -=1
-         if(time < 0){
-            nextQuestion()
-            time = 15  
-         }
-      }, 1000)
+      startCountdown()
    }, 2000)
-   answerBtn.addEventListener("click", () => {
-      clearTimeout(startTimer)
-      let time = 15
-      timer.innerText = time
-      setTimeout(() => {
-         restartTime = setInterval(function (){
-            time -=1
-            if(time < 0){
-               nextQuestion()
-               time = 15  
-            }
-         }, 1000)
-      }, 1000)
-   })
 })
 
-// function stopTimer() {
-//    setTimeout(() => {
-//       timer.innerText = 15
-//    }, 2000)
-   // // clearTimeout(startTimer)
-   // timer.innerText = 15
+function startCountdown() {
+   startTimer = setInterval(function startTime() {
+      timer.innerText = time
+      time -= 1
+      if (time < 0) {
+         nextQuestion()
+         time = 15
+      }
+   }, 1000)    
+}
 
-   // let startTimer = setInterval(function startTime(){
-   //    timer.innerText = time
-   //       time -=1
-   //       if(time < 0){
-   //          nextQuestion()
-   //          time = 15  
-   //       }
-   //    }, 1000)
-// }
+ function stopTimer() {
+   clearTimeout(startTimer)
+   timer.innerText = 15
+}
 
 async function fetchData(results) {
    try {
@@ -121,20 +98,12 @@ function getAnswer(correct_answer, incorrect_answers) {
          button.innerText = answer
          button.addEventListener("click", () =>  {
             button.classList.add("correct")
+            time = 15
+            clearTimeout(startTimer)
             setTimeout(() => {
-               clearTimeout(startTimer)
                nextQuestion()
                scoreCounter()
-               // setTimeout(() => {
-               //    restartTime = setInterval(function (){
-               //       timer.innerText = 15
-               //       time -=1
-               //       if(time < 0){
-               //          nextQuestion()
-               //          time = 15  
-               //       }
-               //    }, 1000)
-               // }, 2000)
+               startCountdown();
             }, 1000)
          })
          answerBtn.append(button)
@@ -144,8 +113,11 @@ function getAnswer(correct_answer, incorrect_answers) {
          button.innerText = answer
          button.addEventListener("click", () => {
             button.classList.add("wrong")
+            time = 15
+            clearTimeout(startTimer)
             setTimeout(() => {
                nextQuestion()
+               startCountdown();
             }, 1000)
          })
          answerBtn.append(button)
@@ -173,9 +145,9 @@ function shuffle(array) {
 function scoreCounter() {
    score++
    scoreCount.innerText = score
-   if(score > 10) {
+   if(score >= 10) {
       resetTimer()
-     let win = document.createElement("h2")
+      let win = document.createElement("h2")
       win.classList.add("message")
       win.textContent = "Perfect score!"
       message.append(win)
