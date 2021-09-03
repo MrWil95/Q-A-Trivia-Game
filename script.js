@@ -114,6 +114,7 @@ function getAnswer(correct_answer, incorrect_answers) {
          button.innerHTML = answer
          button.addEventListener("click", () => {
             button.classList.add("wrong")
+            
             time = 15
             clearTimeout(startTimer)
             setTimeout(() => {
