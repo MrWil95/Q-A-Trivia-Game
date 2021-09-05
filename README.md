@@ -176,13 +176,13 @@ https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Q-and-A-layout?node-id=4%3A125
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|August 28| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|August 30| Project Approval | Complete
-|August 30| Core Application Structure (HTML, CSS, etc.) | Complete
-|August 31| Pseudocode / actual code | Incomplete
-|September 1| Initial Clickable Model  | Incomplete
-|September 2| MVP | Incomplete
-|| Presentations | Incomplete
+|August 28th| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|August 30th| Project Approval | Complete
+|August 30th| Core Application Structure (HTML, CSS, etc.) | Complete
+|August 31st| Pseudocode / actual code | Complete
+|September 1st| Initial Clickable Model  | Complete
+|September 2nd| MVP | Complete
+|September 3rd| Presentations | Complete
 
 ## Priority Matrix
 ![priority_matrix](Priority_matrix.png)
@@ -193,21 +193,21 @@ https://app.conceptboard.com/board/bahe-dmik-cbaq-g2zb-0nek
 
 | Component         | Priority | Estimated Time | Time Invested | Actual Time |
 | ---               | :---:    | :---:          |  :---:        |:---:        |
-|HTML, CSS(layout)  | H        | 2hrs           | 1hr           |             |   
-|Working with API   | H        | 3hrs           | 3hrs          |             |
-|Start game function| H        | 2hrs           | 1.5hrs        |             |
-|Populate questions | H        | 2hrs           | 1hr           |             |
-|Get next question  | H        | 2hrs           | 3h            |             |
-|Populate answers   | H        | 2hrs           | 4.5hrs        |             |
-|Get next answers   | H        | 2hrs           | 5hrs          |             |
-|Timer start        | H        | 2hrs           | 1hr           |             |
-|Timer restart      | H        | 2hrs           | 2.5hrs        |             |
-|Scoring            | H        | 2hrs           | 1hr           |             |
-|End game function  | H        | 3hrs           | 2 hrs         |             |
-|Animation          | M        | 3hrs           | 1hr           |             |
-|PostMVP            | M        | 4hrs           | N/A           |             |
-|Debugging          | H        | 4hrs           | 7hrs          |             |
-|Total              | H        | 32hrs          |               |             |
+|HTML, CSS(layout)  | H        | 2hrs           | 1hr           | 1hr         |   
+|Working with API   | H        | 3hrs           | 3hrs          | 3hrs        |
+|Start game function| H        | 2hrs           | 1.5hrs        | 2hrs        |
+|Populate questions | H        | 2hrs           | 1hr           | 1hr         |
+|Get next question  | H        | 2hrs           | 3hrs          | 3hrs        |
+|Populate answers   | H        | 2hrs           | 4.5hrs        | 5hrs        |
+|Get next answers   | H        | 2hrs           | 5hrs          | 5hrs        |
+|Timer start        | H        | 2hrs           | 1hr           | 1hr         |
+|Timer restart      | H        | 2hrs           | 2.5hrs        | 3hrs        |
+|Scoring            | H        | 2hrs           | 1hr           | 1hr         |
+|End game function  | H        | 3hrs           | 2hrs          | 2hrs        |
+|Animation          | M        | 3hrs           | 1hr           | 1hr         |
+|PostMVP            | M        | 4hrs           | N/A           | N/A         |
+|Debugging          | H        | 4hrs           | 7hrs          | 8hrs        |
+|Total              | H        | 32hrs          | 33.5hrs       | 36hrs       |
 
 
 ## Code Snippet

@@ -6,12 +6,12 @@
    padding: 0;
    font-family: 'Nunito', sans-serif;
    overflow-x: hidden;
+   overflow-y: hidden;
 }
 
 body {
    width: 100vw;
    height: 100vh;
-   overflow-y: hidden;
 }
 
 header {
@@ -83,7 +83,7 @@ main {
    height: 100vh;
    position: relative;
    overflow-y: hidden;
-   top: -41.49em;
+   top: 0;
    transform: translateX(-2000px);
    z-index: 2;
    background-color: rgb(20, 192, 245);
@@ -94,10 +94,10 @@ main {
    display: flex;
    justify-content: flex-end;
    position: absolute;
-   right: 2em;
+   right: 10%;
    width: 100%;
    height: 100%;
-   margin-top: 3em;
+   margin-top: 30%;
 }
 
 .timer {
@@ -131,7 +131,7 @@ main {
    justify-content: center;
    align-items: center;
    position: absolute;
-   top: 20%;
+   top: 45%;
    width: 8em;
    height: 2em;
    border-radius: 20px;
@@ -153,9 +153,9 @@ main {
    display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 1.25em;
-   width: 13em;
-   height: 7em;
+   font-size: 1.15em;
+   width: 15em;
+   height: 10em;
    padding: 0 1em;
    border-radius: 20px;
    background-color: rgba(0, 0, 0, .5);
@@ -164,8 +164,8 @@ main {
 /* Score */
 .score-container {
    display: flex;
-   margin-top: 3em;
-   margin-left: 3em;
+   margin-top: 30%;
+   margin-left: 10%;
 }
 
 .score {
@@ -199,6 +199,7 @@ main {
    justify-content: center;
    flex-flow: row wrap;
    width: 60vw;
+   margin-bottom: 30%;
 }
 
 .answers {
@@ -255,11 +256,11 @@ main {
 }
 
 .fade-out {
-   animation: fadeout 2s ease-out .25s forwards;
+   animation: fadeout 2s ease-out forwards;
 }
 
 .slide-in {
-   animation: slidein 2s ease-out .5s forwards;
+   animation: slidein 1.5s ease-out .25s forwards;
 }
 
 .fade-in {
@@ -284,4 +285,46 @@ main {
       width: 10em;
       height: 5em;
    }
+}
+
+@media (min-width: 900px) {
+   
+   main {
+      top: -42em;
+   }
+   
+   .timer-container {
+      margin-top: 3em;
+   }
+   
+   .timer {
+      width: 5.4em;
+      height: 3em;
+   }
+   
+   .timer span {
+      font-size: 1.75em;
+   }
+      
+   .score-container {
+      margin-top: 3em;
+   }
+   
+   .score {
+      width: 3em;
+      height: 3em;
+   }
+         
+   .score span {
+      font-size: 1.75em;
+   }
+
+   .buttons {
+      margin-bottom: 3em;
+      }
+
+         
+ 
+      
+
 }
