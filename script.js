@@ -7,7 +7,7 @@ const message = document.querySelector(".message-container")
 const questionsDisplay = document.querySelector(".questions-container")
 const scoreCount = document.querySelector("#score")
 const timer = document.querySelector("#timer")
-const section2 = document.querySelector(".section2")
+// const section2 = document.querySelector("#section2")
 let time = 15
 let score = 0
 let shuffleQuestions
@@ -16,9 +16,9 @@ let questions
 let answer
 
 document.querySelector("#start").addEventListener("click", function(){
-   section2.id = "section2"
+   // section2.id = "section2"
    document.querySelector("#section1").className = "fade-out"
-   document.querySelector(".section2").className = "slide-in"
+   document.querySelector("#section2").className = "slide-in"
    setTimeout(() => {
       startCountdown()
    }, 2000)

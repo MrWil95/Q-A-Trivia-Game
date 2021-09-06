@@ -245,16 +245,6 @@ main {
    }
 }
 
-@keyframes fadein {
-   0% {
-      opacity: 0;
-   }
-   
-   100% {
-      opacity: 1;
-   }
-}
-
 .fade-out {
    animation: fadeout 2s ease-out forwards;
 }
