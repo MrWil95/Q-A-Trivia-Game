@@ -7,7 +7,7 @@ const message = document.querySelector(".message-container")
 const questionsDisplay = document.querySelector(".questions-container")
 const scoreCount = document.querySelector("#score")
 const timer = document.querySelector("#timer")
-// const section2 = document.querySelector("#section2")
+const section2 = document.querySelector(".section2")
 let time = 15
 let score = 0
 let shuffleQuestions
@@ -16,9 +16,9 @@ let questions
 let answer
 
 document.querySelector("#start").addEventListener("click", function(){
-   // section2.id = "section2"
-   document.querySelector("#section1").className = "fade-out"
-   document.querySelector("#section2").className = "slide-in"
+   section2.id = "section2"
+   document.querySelector("#section1").classList.add("fade-out")
+   document.querySelector("#section2").classList.add("slide-in")
    setTimeout(() => {
       startCountdown()
    }, 2000)
@@ -167,9 +167,10 @@ function endGame() {
    gameOver.classList.add("message")
    gameOver.innerText = "Game over!"
    message.append(gameOver)
-   // setTimeout(() => {
-   //    document.querySelector("#section2").className = "fade-out"
-   // }, 1000)
+   setTimeout(() => {
+      document.querySelector("#section1").classList.remove("fade-out")
+      document.querySelector("#section1").classList.add("fade-in")
+   }, 1000)
    setTimeout(() => {
       restartGame()
    }, 2000)
