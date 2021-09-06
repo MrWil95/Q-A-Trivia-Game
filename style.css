@@ -263,9 +263,9 @@ main {
    animation: slidein 1.5s ease-out .25s forwards;
 }
 
-.fade-in {
+/* .fade-in {
    animation: fadein 2s ease-out forwards;
-}
+} */
 
 @media (min-width: 400px) {
    .answers {

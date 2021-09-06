@@ -154,23 +154,29 @@ https://www.figma.com/file/981vf2kbeDVoyxpuTP5dr8/Q-and-A-layout?node-id=4%3A125
 	-answer generated/assesed
 	-animation start
 }
-- Timer count down
+<!-- - Timer count down
 - when timer = 00:00 end game
 - responsive style
 - animations
 - Points system incrementation when answer = true 
 - if questions answered correct === x end game display congratulations, perfect score!
-- if questions correct > x when timer ends display congratulations! else, sorry, try again!
+- if questions correct > x when timer ends display congratulations! else, sorry, try again! -->
  
 
 #### PostMVP  
 
-- retry or select category function
-- Add second API
+- Bug fixes {
+    - Fix responsivness
+    - Only occassionally works on iphone x
+    - No button background on iphone
+    - Main doesn't fade out at the end, just disappears 
+}
+- Add multiple API's
+- Category selection
+- Difficulty setting
+- Retry or main menu function
 - Add puzzles and interactive games
 - Add data storage
-- Difficulty setting
-- Category selection
 
 ## Project Schedule
 

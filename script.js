@@ -167,9 +167,9 @@ function endGame() {
    gameOver.classList.add("message")
    gameOver.innerText = "Game over!"
    message.append(gameOver)
-   setTimeout(() => {
-      document.querySelector("#section2").className = "fade-out"
-   }, 1000)
+   // setTimeout(() => {
+   //    document.querySelector("#section2").className = "fade-out"
+   // }, 1000)
    setTimeout(() => {
       restartGame()
    }, 2000)
