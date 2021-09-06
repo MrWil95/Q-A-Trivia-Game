@@ -18,7 +18,7 @@ let answer
 document.querySelector("#start").addEventListener("click", function(){
    section2.id = "section2"
    document.querySelector("#section1").className = "fade-out"
-   document.querySelector("#section2").className = "slide-in"
+   document.querySelector(".section2").className = "slide-in"
    setTimeout(() => {
       startCountdown()
    }, 2000)
